@@ -19,7 +19,7 @@ public class App {
     public static void main(String[] args) {
         final Gson gson = new Gson();
         final List<Visitor> visitors;
-        try (final FileReader reader = new FileReader("src/main/resources/books.json")) {
+        try (final FileReader reader = new FileReader("app/src/main/resources/books.json")) {
             visitors = gson.fromJson(reader, new TypeToken<List<Visitor>>(){}.getType());
         }
         catch(IOException exception) {
